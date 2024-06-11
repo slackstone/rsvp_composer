@@ -1,0 +1,111 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.ewdev.ca/yonas.legesse/drupal-recipe-unpack.git"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/add_content_by_bundle": "^1.2",
+        "drupal/alerts_format": "^1.0@beta",
+        "drupal/bpmn_io": "^2.0@alpha",
+        "drupal/calendar_link": "^3.0",
+        "drupal/ckeditor5_media_embed": "^1.0@beta",
+        "drupal/ckeditor_media_embed": "^2.0",
+        "drupal/coffee": "^1.4",
+        "drupal/color_field": "^3.0",
+        "drupal/content_access": "^2.0",
+        "drupal/core-composer-scaffold": "^10.3",
+        "drupal/core-project-message": "^10.3",
+        "drupal/core-recommended": "^10.3",
+        "drupal/eca": "^2.0@beta",
+        "drupal/editoria11y": "^2.1",
+        "drupal/feeds": "^3.0@beta",
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/fullcalendar_view": "^5.1",
+        "drupal/hide_revision_field": "^2.4",
+        "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/libraries": "^4.0",
+        "drupal/menu_export": "^1.4",
+        "drupal/paragraphs": "^1.17",
+        "drupal/pathauto": "^1.12",
+        "drupal/qrcode": "^1.0@alpha",
+        "drupal/radix": "6.0.x-dev@dev",
+        "drupal/registration": "^3.1",
+        "drupal/smart_date": "^4.1",
+        "drupal/structure_sync": "^2.0",
+        "drupal/webprofiler": "^10.1",
+        "drush/drush": "^12.5",
+        "ewcomposer/unpack": "dev-master",
+        "kanopi/gin-admin-experience": "^1.0@beta",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "rsvp-system/rsvp-system-module": "dev-main",
+        "rsvp-system/rsvp-system-recipe": "dev-main"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true,
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true,
+            "ewcomposer/unpack": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "web/recipes/contrib/{$name}": ["type:drupal-recipe"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>ECA and Drupal Recipes</>",
+                "<bg=blue;fg=white>Pure Butter!</>"
+            ]
+        },
+        "patches": {
+        },
+        "installer-types": ["drupal-recipe"]
+    }
+}
