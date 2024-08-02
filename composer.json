@@ -11,7 +11,8 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://packages.drupal.org/8",
+            "canonical": false
         },
         {
             "type": "vcs",
