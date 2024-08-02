@@ -16,6 +16,19 @@
         {
             "type": "vcs",
             "url": "https://gitlab.ewdev.ca/yonas.legesse/drupal-recipe-unpack.git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/locations",
+                "version": "dev-2.0.x",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://git.drupalcode.org/project/locations.git",
+                    "type": "git",
+                    "reference": "2.0.x"
+                }
+            }
         }
     ],
     "require": {
@@ -73,7 +86,8 @@
         "geocoder-php/google-maps-provider": "^4.7",
         "kanopi/gin-admin-experience": "^1.0@beta",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rsvp-system/rsvp-system-recipe": "dev-main"
+        "rsvp-system/rsvp-system-recipe": "dev-main",
+        "drupal/locations": "dev-2.0.x"
     },
     "conflict": {
         "drupal/drupal": "*"
