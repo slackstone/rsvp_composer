@@ -72,7 +72,6 @@
         "geocoder-php/google-maps-provider": "^4.7",
         "kanopi/gin-admin-experience": "^1.0@beta",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rsvp-system/rsvp-system-module": "dev-main",
         "rsvp-system/rsvp-system-recipe": "dev-main"
     },
     "conflict": {
