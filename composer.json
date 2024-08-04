@@ -118,6 +118,11 @@
         "sort-packages": true
     },
     "extra": {
+        "patches": {
+            "drupal/feeds": {
+                "Fix Feeds issue #3186281": "https://www.drupal.org/files/issues/2024-01-21/feeds-3186281-34.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
