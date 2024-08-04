@@ -118,6 +118,12 @@
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2",
+            "drupal/contrib-module1": "-p1",
+            "drupal/contrib-module2": "-p1"
+        },
         "patches": {
             "drupal/feeds": {
                 "Fix Feeds issue #3186281": "https://www.drupal.org/files/issues/2024-01-21/feeds-3186281-34.patch"
@@ -149,8 +155,6 @@
                 "<bg=blue;fg=white>ECA and Drupal Recipes</>",
                 "<bg=blue;fg=white>Pure Butter!</>"
             ]
-        },
-        "patches": {
         },
         "installer-types": ["drupal-recipe"]
     }
